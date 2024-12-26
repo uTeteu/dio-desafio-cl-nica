@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Jarvão</title>
+    <style>
+        body {
+            background-color: #bfd4b7;
+            margin: 0;
+            padding: 0;
+        }
+
+        #cabecalho {
+            background-color: #248f8d;
+            height: 200px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #logo {
+            width: 150px;
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #menu {
+            margin-right: 0px;
+        }
+
+        #itens {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+            font-size: 20px;
+        }
+
+        .opcao {
+            margin-right: 40px;
+        }
+
+        .link {
+            text-decoration: none;
+            color: #000944;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .link:hover {
+            background-color: white;
+            color: #000944;
+        }
+
+        #footer {
+            display: flex;
+            background-color: #248f8d;
+            height: 60px;
+            color: #000944;
+            text-align: center;
+            justify-content: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #footer label {
+            margin-right: 40px;
+        }
+
+        #descricao {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 25px;
+            color: #000944;
+            text-align: justify;
+        }
+
+        #content {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-top: 75px;
+            padding: 0;
+        }
+
+        #telefone {
+            margin-top: 0;
+            padding: 0;
+        }
+
+        #localizacao {
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .campo {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #248f8d;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="cabecalho">
+            <img id="logo" src="images.png" alt="logo">
+            <nav id="menu">
+                <ul id="itens">
+                    <li class="opcao"><a class="link" href="index.html">HOME</a></li>
+                    <li class="opcao"><a class="link" href="sobre.html">SOBRE A CLÍNICA</a></li>
+                    <li class="opcao"><a class="link" href="atendimento.html">HORÁRIOS DE ATENDIMENTO</a></li>
+                    <li class="opcao"><a class="link" href="contato.html">CONTATO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="content">
+            <div id="telefone">
+                <h1>Contato</h1>
+                <label>
+                    Contato: (xx) xxxxx-xxxx
+                    <br>
+                    WhatsApp: (xx) xxxxx-xxxx
+                </label>
+
+                <form>
+                    <label class="campo" for="nome">Nome: </label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label class="campo" for="email">Email: </label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label class="campo" for="assunto">Assunto: </label>
+                    <input type="text" id="assunto" name="assunto" required>
+
+                    <label class="campo" for="mensagem">Mensagem: </label>
+                    <textarea name="mensagem" id="mensagem" rows="5" required></textarea>
+
+                    <div class="buttons">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="localizacao">
+                <label>Endereço: R. Bocaiúva, 2468 - Centro, Florianópolis - SC</label>
+                <br>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11492.744923343345!2d-48.55393453874342!3d-27.58807327728178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95273816b92d1303%3A0x8e51529bcc5674b1!2sBeiramar%20Shopping!5e1!3m2!1spt-BR!2sbr!4v1735239511660!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer">
+            <label>
+                Contato: (xx) xxxxx-xxxx
+                <br>
+                WhatsApp: (xx) xxxxx-xxxx
+            </label>
+            <br>
+            <label>
+                Instagram: @Lorem Ipsum
+                <br>
+                Facebook: Lorem Ipsum
+            </label>
+        </div>
+    </footer>
+</body>
+
+</html>
